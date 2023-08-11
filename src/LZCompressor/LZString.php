@@ -343,7 +343,7 @@ class LZString
             }
             else {
                 if ($c == $dictionary->size()) {
-                    $entry = $w . $w[0];
+                    $entry = $w . LZUtil::utf8_charAt($w, 0);
                 } else {
                     return null;
                 }
